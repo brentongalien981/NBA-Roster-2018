@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6q5-Zg-gi9">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--TeamsTVC-->
+        <scene sceneID="k9O-Wo-TzO">
+            <objects>
+                <tableViewController id="6q5-Zg-gi9" customClass="TeamsTVC" customModule="NBA_Roster" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="psm-f9-zDx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="TeamNameCell" id="w5k-U2-H7Y">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="w5k-U2-H7Y" id="aSV-jp-zBJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6q5-Zg-gi9" id="Rxw-hd-2V9"/>
+                            <outlet property="delegate" destination="6q5-Zg-gi9" id="AKQ-k3-o8G"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="teamsTableView" destination="psm-f9-zDx" id="t7o-xd-3p6"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FSx-Dh-Koc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="751" y="34"/>
+        </scene>
+        <!--TeamVC-->
+        <scene sceneID="tKg-PO-q9t">
+            <objects>
+                <viewController storyboardIdentifier="TeamVC" id="Hlj-HX-C8V" customClass="TeamVC" customModule="NBA_Roster" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4HM-X3-ILB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="all-star-paintings2" translatesAutoresizingMaskIntoConstraints="NO" id="v97-5a-dom">
+                                <rect key="frame" x="0.0" y="20" width="375" height="213"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="213" id="VhE-LQ-405"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2J0-as-uvK">
+                                <rect key="frame" x="0.0" y="282" width="42" height="61"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uif-Cc-H5l">
+                                        <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pUI-kP-Xe1">
+                                        <rect key="frame" x="0.0" y="20.5" width="42" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdl-e9-aIl">
+                                        <rect key="frame" x="0.0" y="41" width="42" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="pUI-kP-Xe1" secondAttribute="bottom" constant="20" symbolic="YES" id="prh-uu-foW"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CoU-vu-AIy">
+                                <rect key="frame" x="22" y="617" width="35" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="done"/>
+                                <connections>
+                                    <action selector="closeTeamVC:" destination="Hlj-HX-C8V" eventType="touchUpInside" id="h9W-al-C0b"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wHF-Iu-42a">
+                                <rect key="frame" x="277" y="617" width="82" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="View Roster"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lXk-46-deo" firstAttribute="trailing" secondItem="2J0-as-uvK" secondAttribute="trailing" constant="333" id="01m-xg-Rgy"/>
+                            <constraint firstItem="v97-5a-dom" firstAttribute="leading" secondItem="lXk-46-deo" secondAttribute="leading" id="7eX-Yx-CcC"/>
+                            <constraint firstItem="2J0-as-uvK" firstAttribute="leading" secondItem="lXk-46-deo" secondAttribute="leading" id="HIO-UE-CAN"/>
+                            <constraint firstItem="2J0-as-uvK" firstAttribute="top" secondItem="v97-5a-dom" secondAttribute="bottom" constant="49" id="RR0-Yq-o9o"/>
+                            <constraint firstItem="lXk-46-deo" firstAttribute="trailing" secondItem="v97-5a-dom" secondAttribute="trailing" id="Rpc-yZ-5Hk"/>
+                            <constraint firstItem="v97-5a-dom" firstAttribute="top" secondItem="lXk-46-deo" secondAttribute="top" id="fZA-u4-6pM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lXk-46-deo"/>
+                    </view>
+                    <connections>
+                        <outlet property="teamConfNameLabel" destination="pUI-kP-Xe1" id="tmB-85-nmm"/>
+                        <outlet property="teamDivNameLabel" destination="xdl-e9-aIl" id="MRt-fR-yyj"/>
+                        <outlet property="teamLogoImageView" destination="v97-5a-dom" id="BN1-c5-yts"/>
+                        <outlet property="teamNameLabel" destination="Uif-Cc-H5l" id="G9b-dE-pG9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GXp-vd-LNP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1653.5999999999999" y="33.733133433283363"/>
+        </scene>
+        <!--RosterTVC-->
+        <scene sceneID="5FS-D1-KQJ">
+            <objects>
+                <tableViewController id="14q-p7-QMq" customClass="RosterTVC" customModule="NBA_Roster" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="oB7-Cx-7ns">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="O0i-7s-Ybc">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="O0i-7s-Ybc" id="7Zn-aY-P1H">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="14q-p7-QMq" id="c7b-wc-DDy"/>
+                            <outlet property="delegate" destination="14q-p7-QMq" id="5Yq-dc-iSe"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sLw-fF-aSc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2402" y="34"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="all-star-paintings2" width="600" height="788"/>
+    </resources>
+</document>
